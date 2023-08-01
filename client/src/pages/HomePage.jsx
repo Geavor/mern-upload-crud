@@ -6,7 +6,7 @@ import PostCard from '../components/PostCard';
 export const HomePage = () => {
   const { posts } = usePosts();
 
-  const mainContent = () => {
+  const renderMain = () => {
     if (posts.length === 0) {
       return (
         <div className="flex flex-col justify-center items-center">
@@ -38,7 +38,7 @@ export const HomePage = () => {
           Create new post
         </Link>
       </header>
-      {mainContent()}
+      {renderMain()}
     </div>
   );
 };
